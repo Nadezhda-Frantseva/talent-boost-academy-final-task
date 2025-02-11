@@ -1,0 +1,25 @@
+h1 {
+  width: 100%
+}
+.URL {
+  width: 100%
+}
+.button {
+  width: 30%;
+}
+.form-div-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-item {
+  position:relative;
+  margin-bottom: 0.5em;
+  padding: 10px;
+}
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

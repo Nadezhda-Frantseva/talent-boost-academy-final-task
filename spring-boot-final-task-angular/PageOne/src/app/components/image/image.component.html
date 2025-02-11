@@ -1,0 +1,18 @@
+<div *ngIf="categorizedImage">
+  <div>
+    <img src="{{categorizedImage.url}}"/>
+  </div>
+  <section>
+    <a *ngFor="let i of categorizedImage.labels"  [routerLink]="['/gallery', i.label]">
+      <button mat-raised-button color="primary"
+              matTooltip="{{i.confidence}}">
+        {{i.label}}
+      </button>
+    </a>
+    <div class="formattedDate">
+      <span>
+        Analysed on {{categorizedImage.formattedDate}}
+      </span>
+    </div>
+  </section>
+</div>

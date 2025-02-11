@@ -1,0 +1,12 @@
+<header class="header-6">
+  <form class="form-style">
+    <input value="{{searchedValue}}" placeholder="Search by tag" type="text" [(ngModel)]="searchedValue" [ngModelOptions]="{standalone: true}"/>
+    <button id="submit-button" type="submit" (click)="search()" action="outline">Search</button>
+  </form>
+</header>
+<div *ngIf="images.length != 0" class="grid-container">
+  <a *ngFor="let image of images" [routerLink]="['/images', image.id]" class="item">
+    <img src="{{image.url}}">
+  </a>
+</div>
+
